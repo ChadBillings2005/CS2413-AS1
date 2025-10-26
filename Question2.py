@@ -5,7 +5,7 @@ import base64
 
 
 with open("private_key.pem", "rb") as f:
-		private_key = f.read()
+	private_key = f.read()
 
 #print(private_key[:50])
 
@@ -20,7 +20,7 @@ hash_options = {
     "D": "0d09a513353e632b068a1a49e6ecc0b2c753ccc1c95cb1751745ba576d1396c8"
 }
 
-print("Options:")
+print("Options:\n")
 
 for key, value in hash_options.items():
 	print(f"{key}: {value}")
