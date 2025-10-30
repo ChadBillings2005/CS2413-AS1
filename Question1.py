@@ -1,4 +1,4 @@
-
+#Chad Billings, Candice Inman CS2413
 
 from Crypto.Hash import SHA256, MD5, HMAC
 from Crypto.Random import get_random_bytes
