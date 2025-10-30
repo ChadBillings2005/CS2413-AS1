@@ -57,7 +57,7 @@ def decryption(blob: bytes, password: str, shamd5: str) -> str:
     # verifies integrity before decrypting/unpadding, both different password or altered text file
     hmac_obj = HMAC.new(mac_key, iv + ct, digestmod=Hash)
     hmac_obj.verify(tag)
-    print("[INFO] Hash verified! Decrypting message...")  # ✅ Added line
+    print("[INFO] Hash verified! Decrypting message...")  
 
     cipher = AES.new(key, AES.MODE_CBC, iv=iv)
     pt = unpad(cipher.decrypt(ct), 16)
@@ -67,7 +67,7 @@ def main():
     print("AES Encryption & Decryption with Integrity Check")
 
     EorD = input("Do you want to (E)ncrypt or (D)ecrypt a message? ")
-    username = input("Enter your username: ")  # kept for parity; not used in crypto
+    username = input("Enter your username: ")  
     password = input("Enter your password: ")
     YorN = input("Use SHA-256 (Y) or MD5 (N)? ")
 
